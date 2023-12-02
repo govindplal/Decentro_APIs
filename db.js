@@ -105,10 +105,9 @@ const Payment = mongoose.model('Payment', paymentSchema);
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://govindplal:YuxKamkNsxIVmkBE@hunt1.fy6jd1j.mongodb.net/?retryWrites=true&w=majority',
+        await mongoose.connect('MongoURI',
          {
             useNewUrlParser: true,
-            useUnifiedTopology: true,
         });
         console.log('MongoDB Connected');
     } catch (error) {
